@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Cromseal Roofguard</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/x-icon" href="images/logo/cromsealLogoFavicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo/cromsealLogoNavyCrop01.png" alt="Logo">
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="services.html" class="dropbtn">Services</a>
+                    <div class="dropdown-content">
+                        <a href="concrete-roof-coating.html">Concrete/Clay Roof Coating</a>
+                        <a href="metal-roof-coating.html">Metal Roof Coating</a>
+                        <a href="re-roofing.html">Re-Roofing</a>
+                        <a href="insulation.html">Insulation</a>
+                        <a href="slab-waterproofing.html">R.C. Slab Waterproofing</a>
+                    </div>
+                </li>                
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="about-hero">
+        <div class="about-hero-content">
+            <h1>Malaysia's Trusted Roof Restoration & Coating Specialists</h1>
+            <p>At Cromseal, we've been redefining roof restoration solutions since 2008. With over 15,000 commercial, government, and private properties enhanced by our expertise, we’re proud to be one of the leading specialists in the industry. From rectifying existing issues to full-scale roof restoration, our mission is to provide durable protection and lasting performance for your property. Experience the Cromseal difference—where innovation meets reliability, and your satisfaction is our priority.</p>
+        </div>
+    </section>
+    
+    <div class="statistics-board">
+        <div class="stat-item">
+            <span class="stat-number" id="projectCounter">0</span>
+            <p>Projects Completed</p>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number" id="yearsCounter">0</span>
+            <p>Years of Service</p>
+        </div>
+    </div>
+    
+    <section class="about-content">
+        <h2>Our Story</h2>
+        <p>Cromseal Roofguard Sdn Bhd has been a leader in the roofing industry, delivering high-quality roof protection, restoration, and maintenance services. Over the years, we have successfully completed numerous projects for commercial, residential, and industrial properties.</p>
+        
+        <h2>Our Commitment</h2>
+        <p>We believe that everyone deserves a reliable roof, which is why we focus on durability, quality craftsmanship, and customer satisfaction. Our expert team ensures every project meets the highest standards of excellence.</p>
+        
+        <h2>Our Legacy</h2>
+        <p>From high-profile commercial buildings to residential homes, our completed projects stand as a testament to our dedication and expertise. We continue to evolve, implementing the latest roofing technologies and eco-friendly solutions.</p>
+    </section>
+    
+    <a href="https://wa.me/0182071833" class="whatsapp-float" target="_blank">
+        <img src="images/icons/WhatsApp_icon.png" alt="WhatsApp">
+    </a>
+
+    <di</div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Cromseal Roofguard Sdn Bhd. All rights reserved.</p>
+            <p>Contact Us: No.16, Jalan Industri USJ 1/13, Taman Perindustrian USJ 1, Subang Jaya, Selangor.</p>
+            <p>Email: info@cromseal.com | Phone: +6012-3456789</p>
+            <p><a href="terms.html">Terms and Conditions</a></p>
+        </div>
+        <div class="logo">
+            <img src="images/logo/cromsealLogoNavyCrop01.png" alt="Logo">
+        </div>
+    </footer>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let counter = 0;
+            const target = 20;
+            const speed = 100;
+
+            function updateCounter() {
+                if (counter < target) {
+                    counter++;
+                    document.getElementById("yearsCounter").innerText = counter;
+                    setTimeout(updateCounter, speed);
+                }
+            }
+            updateCounter();
+
+            let projectCounter = 0;
+            const projectTarget = 15000;
+            const projectSpeed = 130;
+
+            function updateProjectCounter() {
+                if (projectCounter < projectTarget) {
+                    projectCounter += 1000;
+                    document.getElementById("projectCounter").innerText = projectCounter + "+";
+                    setTimeout(updateProjectCounter, projectSpeed);
+                }
+            }
+            updateProjectCounter();
+        });
+    </script>
+</body>
+</html>

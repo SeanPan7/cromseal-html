@@ -1,0 +1,404 @@
+/* Expanded Container (Services) */
+.services-container {
+    text-align: center;
+    position: relative;  /* Add this */
+    min-height: 600px;  /* Adjust this value based on your needs */
+    margin-bottom: 40px; /* Add space before footer */
+}
+
+.services-container h1{
+    color: #003366;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.services-container p{
+    color: #4f4d4d;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+/* Clearfix for services-container */
+.services-container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.expanded-container {
+    margin: 20px auto;
+    height: 600px;
+    width: 100%;
+    border: 0.1px solid black;
+    background: white;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.expanded-container ul {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.expanded-container ul li {
+    list-style: none;
+    position: relative;
+    width: 20%;
+    height: 100%;
+    border-right: 1px solid black;
+    box-sizing: border-box;
+    transition: 0.5s;
+    text-align: center;
+    overflow: hidden;
+}
+
+
+/*This is to display each image*/
+.expanded-container ul li:nth-child(3) {
+    background: url("../images/concrete-coating/concrete-coating-01.JPG");
+    background-size: cover;
+    background-position: center;
+}
+/* Add a dark overlay to the first list item */
+.expanded-container ul li:nth-child(3)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.195); /* Adjust the opacity as needed */
+    z-index: 1; /* Ensure the overlay is above the image but below the text */
+}
+
+.expanded-container ul li:nth-child(2) {
+    background: url("../images/metal-coating/metal-coating-01.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.expanded-container ul li:nth-child(1) {
+    background: url("../images/reroofing/reroofing-01.JPG");
+    background-size: cover;
+    background-position: center;
+}
+
+.expanded-container ul li:nth-child(4) {
+    background: url("../images/insulation/insulation-01.JPG");
+    background-size: cover;
+    background-position: center;
+}
+
+.expanded-container ul li:nth-child(5) {
+    background: url("../images/slab-waterproofing/slab-waterproofing-01.JPG");
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* Adjust the hover width distribution for remaining items */
+.expanded-container ul:hover li {
+    width: 10%;
+}
+
+.expanded-container ul li:hover {
+    width: 60%; /* Increased from 60% to compensate for hidden last item */
+}
+
+/* Container block styles (description that appears on hover) */
+.expanded-container ul li .container-block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110px;
+    max-height: 110px;
+    overflow: hidden;
+    background: rgba(0, 30, 83, 0.7); /* Same as your nav color with opacity */
+    box-sizing: border-box;
+    color: #fff;
+    z-index: 2;
+    padding: 10px 20px;
+    transition: max-height 0.5s ease; /* Add transition for smooth effect */
+}
+
+
+
+.expanded-container ul li:hover .container-block {
+    height: 210px;
+    max-height: 250px; /* Set max-height to allow expansion */
+    
+}
+
+
+
+/* Ensure the <h2> element does not change on hover */
+.expanded-container ul:hover li .container-block h2 {
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Add ellipsis for overflow text */
+    width: 100%; /* Set a fixed width */
+    margin-bottom: 5px; /* Reduce margin-bottom */
+
+}
+
+
+
+/* Hide the <p> elements initially */
+.expanded-container ul li .container-block p {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    font-size: 20px; /* Increase font size */
+    font-weight: bold; /* Make text bolder */
+    margin: 10px;
+    padding: 0;
+    color: #fff;
+}
+
+/* Hide the view more button initially */
+.expanded-container ul li .container-block .view-more-button {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+/* Show the view more button when the parent .container-block is fully expanded */
+.expanded-container ul li:hover .container-block .view-more-button {
+    display: inline-block;
+    opacity: 1;
+    transition-delay: 0.5s; /* Add a delay to match the <p> element */
+}
+
+/* Show the <p> elements when the parent .container-block is fully expanded */
+.expanded-container ul li:hover .container-block p {
+    display: block;
+    transition-delay: 0.5s; /* Add a delay before appearing */
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* View More button styles */
+.view-more-button {
+    display: inline-block;
+    padding: 12px 24px; /* Increase padding */
+    background-color: #f19257;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px; /* Increase font size */
+    font-weight: bold;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease-in-out; /* Smooth transition */
+}
+
+.view-more-button:hover {
+    color: black;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Add a stronger shadow on hover */
+}
+/* Divider line above the contact button */
+.contact-divider {
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px solid #ccc;
+}
+
+/* Contact button styles */
+.contact-button-container {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact-button-container h2 {
+    color: #003366;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #001f53;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #f19257;
+}
+
+.mobile-services-container {
+    display: none;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    /* Hide desktop content */
+    .services-container {
+        display: none;
+    }
+
+    /* Show mobile content */
+    .mobile-services-container {
+        display: block;
+    }
+
+    /* Mobile styles */
+    body {
+        margin: 0;
+        padding: 0;
+        background: #f5f5f5;
+    }
+
+    .page-header {
+        background: #001f53;
+        color: white;
+        padding: 15px;
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .services-intro {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .services-intro h1 {
+        color: #001f53;
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    .services-intro p {
+        color: #666;
+        font-size: 16px;
+        line-height: 1.5;
+        margin: 0;
+        padding: 0 20px;
+    }
+
+    .services-list {
+        padding: 10px;
+    }
+
+    .service-card {
+        margin-bottom: 20px;
+        border-radius: 8px;
+        overflow: hidden;
+        background: white;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .service-image {
+        position: relative;
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+    }
+
+    .service-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .service-title {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 31, 83, 0.9);
+        color: white;
+        padding: 15px;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .service-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+        background: white;
+    }
+
+    .service-content.expanded {
+        max-height: 300px;
+    }
+
+    .service-description {
+        padding: 20px;
+        color: #333;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .view-more-btn {
+        display: block;
+        margin: 0 20px 20px;
+        padding: 12px;
+        background: #f19257;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 25px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+    }
+
+    .view-more-btn:hover {
+        background: #e67e3c;
+    }
+}
+
+/* Navigation mobile styles */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    nav .logo {
+        margin-bottom: 10px;
+    }
+
+    nav .logo img {
+        height: 40px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Adjust dropdown for mobile */
+    .dropdown-content {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        display: none;
+    }
+
+    .dropdown:hover .dropdown-content,
+    .dropdown:focus .dropdown-content,
+    .dropdown:active .dropdown-content {
+        display: block;
+    }
+}

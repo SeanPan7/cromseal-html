@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cromseal Roofguard</title>
+    <link rel="icon" type="image/x-icon" href="images/logo/cromsealLogoFavicon.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/gallery-styles.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="js/scripts.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo/cromsealLogoNavyCrop01.png" alt="Logo">
+            </div>
+            <div class="hamburger" id="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="services.html" class="dropbtn">Services</a>
+                    <button class="dropdown-toggle" id="dropdown-toggle">▼</button>
+                    <div class="dropdown-content">
+                        <a href="concrete-roof-coating.html">Concrete/Clay Roof Coating</a>
+                        <a href="metal-roof-coating.html">Metal Roof Coating</a>
+                        <a href="re-roofing.html">Re-Roofing</a>
+                        <a href="insulation.html">Insulation</a>
+                        <a href="slab-waterproofing.html">R.C. Slab Waterproofing</a>
+                    </div>
+                </li>                
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Main Gallery Page -->
+    <div id="galleryPage" class="container">
+        <h1>Project Gallery</h1>
+        <div id="galleryGrid">
+            <!-- Categories and projects will be populated here -->
+        </div>
+    </div>
+    
+    <!-- Project Detail Page -->
+    <div id="projectDetailPage">
+        <div class="container">
+            <button class="back-button" id="backButton">← Back to Gallery</button>
+            
+            <div id="projectDetailContent">
+                <!-- Project details will be populated here -->
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Cromseal Roofguard Sdn Bhd. All rights reserved.</p>
+            <p>Contact Us: No.16, Jalan Industri USJ 1/13, Taman Perindustrian USJ 1, Subang Jaya, Selangor.</p>
+            <p>Email: info@cromseal.com | Phone: +6012-3456789</p>
+            <p><a href="terms.html">Terms and Conditions</a></p>
+        </div>
+        <div class="logo">
+            <img src="images/logo/cromsealLogoNavyCrop01.png" alt="Logo">
+        </div>
+    </footer>
+    <script>
+        // Project data
+        const projects = [
+            {
+                id: 1,
+                category: "Roof Restoration & Coating",
+                title: "Holiday Inn Subang",
+                thumbnail: "/api/placeholder/500/300",
+                excerpt: "content....",
+                date: "February 2025",
+                client: "Holiday Inn",
+                description: "Content",
+                images: [
+                    "/api/placeholder/600/400",
+                    "/api/placeholder/600/400",
+                    "/api/placeholder/600/400",
+                    "/api/placeholder/600/400",
+                    "/api/placeholder/600/400",
+                    "/api/placeholder/600/400",
+                    "/api/placeholder/600/400",
+                    "/api/placeholder/600/400",
+                    "/api/placeholder/600/400"
+                ]
+            },
+            {
+                id: 2,
+                category: "Roof Restoration & Coating",
+                title: "Sunway Pyramid",
+                thumbnail: "/api/placeholder/500/300",
+                excerpt: "Sunway Content...",
+                date: "January 2025",
+                client: "Sunway Industries",
+                description: "This project involved a complete redesign of a corporate website to improve user experience and conversion rates. We implemented a modern design language with focus on accessibility and mobile responsiveness.\n\nThe client needed a website that would better reflect their brand identity while providing a seamless experience for their customers. We conducted extensive user research to understand the pain points of the existing website and identified opportunities for improvement.\n\nOur solution incorporated a clean, modern aesthetic with intuitive navigation and optimized content hierarchy. We implemented a responsive design that adapts seamlessly to all device sizes, ensuring a consistent experience across desktop, tablet, and mobile.\n\nThe new design resulted in a 45% increase in user engagement and a 30% reduction in bounce rate. The client reported a significant improvement in lead generation through the website, with conversion rates increasing by 25% in the first month after launch.",
+                images: [
+                    "/api/placeholder/600/400",
+                    "/api/placeholder/600/400",
+                    "/api/placeholder/600/400",
+                    "/api/placeholder/600/400",
+                    "/api/placeholder/600/400",
+                    "/api/placeholder/600/400",
+                    "/api/placeholder/600/400",
+                    "/api/placeholder/600/400",
+                    "/api/placeholder/600/400"
+                ]
+            },
+            {
+                id: 3,
+                category: "Roof Restoration & Coating",
+                title: "Summit USJ",
+                thumbnail: "/api/placeholder/500/300",
+                excerpt: "Summit Content...",
+                date: "January 2025",
+                client: "Summit Mall",
+                description: "This project involved a complete redesign of a corporate website to improve user experience and conversion rates. We implemented a modern design language with focus on accessibility and mobile responsiveness.\n\nThe client needed a website that would better reflect their brand identity while providing a seamless experience for their customers. We conducted extensive user research to understand the pain points of the existing website and identified opportunities for improvement.\n\nOur solution incorporated a clean, modern aesthetic with intuitive navigation and optimized content hierarchy. We implemented a responsive design that adapts seamlessly to all device sizes, ensuring a consistent experience across desktop, tablet, and mobile.\n\nThe new design resulted in a 45% increase in user engagement and a 30% reduction in bounce rate. The client reported a significant improvement in lead generation through the website, with conversion rates increasing by 25% in the first month after launch.",
+                images: [
+                    "/api/placeholder/600/400",
+                    "/api/placeholder/600/400",
+                    "/api/placeholder/600/400",
+                    "/api/placeholder/600/400",
+                    "/api/placeholder/600/400",
+                    "/api/placeholder/600/400",
+                    "/api/placeholder/600/400",
+                    "/api/placeholder/600/400",
+                    "/api/placeholder/600/400"
+                ]
+            },
+            {
+                id: 4,
+                category: "Re-Roofing",
+                title: "Re-Roofing 1",
+                thumbnail: "/api/placeholder/500/300",
+                excerpt: "Content 4",
+                date: "February 2025",
+                client: " Industries",
+                description: "This project involved a complete redesign of a corporate website to improve user experience and conversion rates. We implemented a modern design language with focus on accessibility and mobile responsiveness.\n\nThe client needed a website that would better reflect their brand identity while providing a seamless experience for their customers. We conducted extensive user research to understand the pain points of the existing website and identified opportunities for improvement.\n\nOur solution incorporated a clean, modern aesthetic with intuitive navigation and optimized content hierarchy. We implemented a responsive design that adapts seamlessly to all device sizes, ensuring a consistent experience across desktop, tablet, and mobile.\n\nThe new design resulted in a 45% increase in user engagement and a 30% reduction in bounce rate. The client reported a significant improvement in lead generation through the website, with conversion rates increasing by 25% in the first month after launch.",
+                images: [
+                    "/api/placeholder/600/400",
+                    "/api/placeholder/600/400",
+                    "/api/placeholder/600/400",
+                    "/api/placeholder/600/400",
+                    "/api/placeholder/600/400",
+                    "/api/placeholder/600/400",
+                    "/api/placeholder/600/400",
+                    "/api/placeholder/600/400",
+                    "/api/placeholder/600/400"
+                ]
+            },
+            {
+                id: 5,
+                category: "Re-Roofing",
+                title: "Title 5",
+                thumbnail: "/api/placeholder/500/300",
+                excerpt: "Complete overhaul of a corporate website with focus on user experience.",
+                date: "February 2025",
+                client: "TechCorp Industries",
+                description: "This project involved a complete redesign of a corporate website to improve user experience and conversion rates. We implemented a modern design language with focus on accessibility and mobile responsiveness.\n\nThe client needed a website that would better reflect their brand identity while providing a seamless experience for their customers. We conducted extensive user research to understand the pain points of the existing website and identified opportunities for improvement.\n\nOur solution incorporated a clean, modern aesthetic with intuitive navigation and optimized content hierarchy. We implemented a responsive design that adapts seamlessly to all device sizes, ensuring a consistent experience across desktop, tablet, and mobile.\n\nThe new design resulted in a 45% increase in user engagement and a 30% reduction in bounce rate. The client reported a significant improvement in lead generation through the website, with conversion rates increasing by 25% in the first month after launch.",
+                images: [
+                    "/api/placeholder/600/400",
+                    "/api/placeholder/600/400",
+                    "/api/placeholder/600/400",
+                    "/api/placeholder/600/400",
+                    "/api/placeholder/600/400",
+                    "/api/placeholder/600/400",
+                    "/api/placeholder/600/400",
+                    "/api/placeholder/600/400",
+                    "/api/placeholder/600/400"
+                ]
+            },
+            {
+                id: 6,
+                category: "Insulation",
+                title: "Insulation 1",
+                thumbnail: "/api/placeholder/500/300",
+                excerpt: "Insulation 1",
+                date: "January 2025",
+                client: "Boutique Retailer",
+                description: "Insulation 1",
+                images: [
+                    "/api/placeholder/600/400",
+                    "/api/placeholder/600/400",
+                    "/api/placeholder/600/400",
+                    "/api/placeholder/600/400",
+                    "/api/placeholder/600/400",
+                    "/api/placeholder/600/400",
+                    "/api/placeholder/600/400",
+                    "/api/placeholder/600/400",
+                    "/api/placeholder/600/400"
+                ]
+            },
+            {
+                id: 7,
+                category: "Insulation",
+                title: "Insulation 2",
+                thumbnail: "/api/placeholder/500/300",
+                excerpt: "Fitness tracking application with social features.",
+                date: "December 2024",
+                client: "FitTech Startup",
+                description: "Insulation 2",
+                images: [
+                    "/api/placeholder/600/400",
+                    "/api/placeholder/600/400",
+                    "/api/placeholder/600/400",
+                    "/api/placeholder/600/400",
+                    "/api/placeholder/600/400",
+                    "/api/placeholder/600/400",
+                    "/api/placeholder/600/400",
+                    "/api/placeholder/600/400",
+                    "/api/placeholder/600/400"
+                ]
+            }
+        ];
+        
+        // DOM elements
+        const galleryPage = document.getElementById('galleryPage');
+        const galleryGrid = document.getElementById('galleryGrid');
+        const projectDetailPage = document.getElementById('projectDetailPage');
+        const projectDetailContent = document.getElementById('projectDetailContent');
+        const backButton = document.getElementById('backButton');
+        
+        // Populate gallery with project cards
+        function populateGallery() {
+            const categories = [...new Set(projects.map(p => p.category))]; // Get unique categories
+
+            categories.forEach(category => {
+                const categorySection = document.createElement('div');
+                categorySection.className = 'category-section';
+                categorySection.innerHTML = `<h2 class="category-header">${category}</h2>`;
+
+                const categoryGrid = document.createElement('div');
+                categoryGrid.className = 'gallery-grid';
+
+                projects
+                    .filter(project => project.category === category)
+                    .forEach(project => {
+                        const projectCard = document.createElement('div');
+                        projectCard.className = 'project-card';
+                        projectCard.innerHTML = `
+                            <img src="${project.thumbnail}" alt="${project.title}" class="project-thumbnail">
+                            <div class="project-info">
+                                <h3 class="project-title">${project.title}</h3>
+                                <button class="view-project-btn" data-project-id="${project.id}">View Project</button>
+                            </div>
+                        `;
+                        categoryGrid.appendChild(projectCard);
+                    });
+
+                categorySection.appendChild(categoryGrid);
+                galleryGrid.appendChild(categorySection);
+            });
+        }
+        
+        // Show project details page
+        function showProjectDetails(projectId) {
+            const project = projects.find(p => p.id === projectId);
+            
+            if (!project) return;
+            
+            // Format description with paragraphs
+            const formattedDescription = project.description.split('\n\n').map(para => `<p>${para}</p>`).join('');
+            
+            // Populate the project detail content
+            projectDetailContent.innerHTML = `
+                <div class="project-detail-header">
+                    <h2 class="project-detail-title">${project.title}</h2>
+                    
+                    <div class="project-detail-meta">
+                        <div class="meta-item">
+                            <span>Date:</span> ${project.date}
+                        </div>
+                        <div class="meta-item">
+                            <span>Client:</span> ${project.client}
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <div class="project-detail-images">
+                    ${project.images.map(img => `<img src="${img}" alt="Project image">`).join('')}
+                </div>
+                
+                <div class="project-detail-description">
+                    ${formattedDescription}
+                </div>
+            `;
+            
+            // Hide gallery, show detail page
+            galleryPage.style.display = 'none';
+            projectDetailPage.style.display = 'block';
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+        
+        // Return to gallery
+        function backToGallery() {
+            projectDetailPage.style.display = 'none';
+            galleryPage.style.display = 'block';
+        }
+        
+        // Event Listeners
+        function setupEventListeners() {
+            // Open project detail when "View Project" is clicked
+            document.addEventListener('click', function(e) {
+                if (e.target.classList.contains('view-project-btn')) {
+                    const projectId = parseInt(e.target.getAttribute('data-project-id'));
+                    showProjectDetails(projectId);
+                }
+            });
+            
+            // Back button to return to gallery
+            backButton.addEventListener('click', backToGallery);
+            
+            // Handle browser back button
+            window.addEventListener('popstate', function(e) {
+                if (projectDetailPage.style.display === 'block') {
+                    backToGallery();
+                }
+            });
+        }
+        
+        // Initialize
+        function init() {
+            populateGallery();
+            setupEventListeners();
+        }
+        
+        // Run initialization when DOM is loaded
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>

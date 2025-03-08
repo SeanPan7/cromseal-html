@@ -559,6 +559,16 @@ nav ul li a.current-page::after {
     z-index: 2;
 }
 
+.title-section .overlay-lighter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(71, 70, 70, 0.5); /* Add a semi-transparent black overlay */
+    z-index: 2;
+}
+
 .title-section .title-content {
     position: relative;
     z-index: 3;
@@ -717,14 +727,14 @@ nav ul li a.current-page::after {
 
 /* Process FlowChart */ 
 .process {
-    padding: 80px 20px;
+    padding: 40px 10px;
     background: white;
     overflow-x: auto;
     background-color: #c9c0c095; /* Light gray background color */
 
 }
 .process-container {
-    max-width: 1400px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -739,7 +749,7 @@ nav ul li a.current-page::after {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
     margin: 50px auto;
     min-width: max-content;
     padding: 20px 0;
@@ -749,7 +759,7 @@ nav ul li a.current-page::after {
 
 .flow-step {
     position: relative;
-    width: 280px;
+    width: 260px;
     padding: 20px;
     background: white;
     border-radius: 10px;
@@ -809,6 +819,79 @@ nav ul li a.current-page::after {
     to {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .title-section .overlay-lighter {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(70, 70, 70, 0.5); /* Add a semi-transparent black overlay */
+        z-index: 2;
+    }
+    
+    .title-section .title-content {
+        position: relative;
+        z-index: 3;
+    }
+    
+    .title-section h1 {
+        font-size: 3rem;
+        font-weight: 800;
+        margin: 0;
+    }
+    
+    .title-section p {
+        font-size: 1.2rem;
+        font-weight: 500;
+        margin: 10px 0 0;
+    }
+
+    .process {
+        padding: 20px 10px;
+        overflow-x: hidden; /* Remove horizontal scrolling */
+    }
+
+    .flowchart {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+        gap: 20px; /* Increase gap between steps */
+        margin: 30px auto;
+        padding: 10px 0;
+    }
+
+    .flow-step {
+        width: 90%; /* Make steps wider relative to screen */
+        max-width: 300px; /* Set maximum width */
+        margin: 0 auto;
+        transform: translateY(-20px); /* Change animation direction */
+    }
+
+    .flow-step.active {
+        transform: translateY(0); /* Update active animation */
+    }
+
+    .flow-arrow {
+        transform: rotate(90deg); /* Rotate arrow downward */
+        font-size: 20px; /* Slightly smaller arrow */
+        transform: translateY(-20px); /* Change animation direction */
+    }
+
+    .flow-arrow.active {
+        transform: translateY(0) rotate(90deg); /* Keep rotation in active state */
+    }
+
+    .thicker-arrow {
+        font-size: 30px; /* Slightly smaller for mobile */
+    }
+
+    .section-title {
+        font-size: 1.5em; /* Reduce title size */
+        margin-bottom: 30px;
     }
 }
 

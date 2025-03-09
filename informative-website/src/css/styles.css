@@ -299,7 +299,7 @@ nav ul li a.current-page::after {
 
 .hero-side {
     position: relative;
-    height: calc(80vh + 50px);
+    height: calc(80vh + 40px);
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -308,13 +308,13 @@ nav ul li a.current-page::after {
 }
 
 .hero-image-side {
-    width: 60%;
+    width: 65%;
     height: 100%;
     object-fit: cover;
 }
 
 .hero-content-side {
-    width: 40%;
+    width: 35%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -1256,7 +1256,7 @@ footer .logo img {
     }
 
     .step-content p {
-        font-size: 0.85rem; /* Smaller font size for mobile */
+        font-size: 0.95rem; /* Smaller font size for mobile */
         line-height: 1.3; /* Tighter line height for better fit */
     }
 }

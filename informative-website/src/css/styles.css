@@ -1260,3 +1260,207 @@ footer .logo img {
         line-height: 1.3; /* Tighter line height for better fit */
     }
 }
+
+/* Base styles and reset */
+:root {
+    --primary-color: #4a4e89;
+    --text-color: #333;
+    --subtext-color: #555;
+    --border-color: #f19257;
+    --hover-color: #3d4172;
+    --transition-speed: 0.3s;
+    --spacing-sm: 10px;
+    --spacing-md: 20px;
+    --spacing-lg: 50px;
+}
+
+
+/* Container layout */
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-md);
+    position: relative;
+}
+
+
+/* Contact columns */
+.contact-column {
+    text-align: center;
+    flex: 0 0 45%;
+    padding: var(--spacing-md);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+/* Typography styles */
+.contact-column h2{
+    color: var(--primary-color);
+    font-size: 2rem;
+    letter-spacing: 3px;
+    margin-bottom: var(--spacing-sm);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.contact-column h3 {
+    color: var(--subtext-color);
+    margin-bottom: var(--spacing-md);
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+/* Divider with enhanced styling */
+.contact-divider {
+    width: 60%;
+    height: 4px;
+    background: #f19257;
+    border: none;
+    margin: var(--spacing-md) auto;
+}
+
+/* Contact information */
+.contact-column p {
+    font-size: 1.125rem;
+    margin: var(--spacing-sm) 0;
+    transition: color var(--transition-speed);
+}
+
+.contact-column p:hover {
+    color: var(--primary-color);
+}
+
+/* Operating hours section */
+.operating-hours {
+    text-align: center;
+    width: 100%;
+    margin-top: var(--spacing-lg);
+    padding: var(--spacing-md);
+    position: relative;
+}
+
+.operating-hours::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 2px;
+}
+
+.hours-heading {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-md);
+    font-weight: 600;
+}
+
+.operating-hours p {
+    margin: 8px 0;
+    font-size: 1.05rem;
+}
+
+.social-icon {
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    margin: 0px 10px;
+}
+
+.social-icon img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+
+.social-icon:hover img {
+    transform: scale(1.1);
+}
+
+.extra-circle-one {
+    background-color: rgba(74, 78, 137, 0.1); /* Light version of primary color */
+    top: 100px;
+    left: 10%;
+    transform: translate(-50%, -60px);
+}
+
+.extra-circle-two {
+    background-color: rgba(95, 151, 200, 0.15); /* Light version of border color */
+    top: 20%;
+    right: 10%;
+    transform: translate(20%, 0);
+}
+
+.extra-circle-three {
+    background-color: rgba(200, 135, 95, 0.15); /* Light version of border color */
+    top: 70%;
+    right: 30%;
+    transform: translate(50%, 40%);
+}
+.extra-circle-four {
+    background-color: rgba(156, 124, 77, 0.15); /* Light version of border color */
+    top: 50%;
+    right: 80%;
+    transform: translate(30%, 0);
+}
+.extra-circle-one,
+.extra-circle-two,
+.extra-circle-three,
+.extra-circle-four {
+    content: '';
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .contact-column {
+        flex: auto;
+    }
+
+    .mobile-width{
+    width: 60% !important;
+    }
+
+    .extra-circle-one {
+        background-color: rgba(74, 78, 137, 0.1); /* Light version of primary color */
+        top: 10px;
+        left: 10%;
+        transform: translate(-50%, 0);
+    }
+    
+    .extra-circle-two {
+        background-color: rgba(241, 146, 87, 0.15); /* Light version of border color */
+        top: 90%;
+        right: 60%;
+        transform: translate(30%, 0);
+    }
+
+    .extra-circle-three {
+        background-color: rgba(128, 149, 182, 0.239); /* Light version of border color */
+        top: 40%;
+        right: 0%;
+        transform: translate(0, 0);
+    }
+
+
+    .extra-circle-one,
+    .extra-circle-two,
+    .extra-circle-three {
+        content: '';
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        z-index: -1;
+    }
+
+}
+
+
